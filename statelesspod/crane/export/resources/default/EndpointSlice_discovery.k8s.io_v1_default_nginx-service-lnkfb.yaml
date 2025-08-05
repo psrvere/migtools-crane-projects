@@ -1,0 +1,76 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 10.244.1.2
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: source-cluster-worker2
+  targetRef:
+    kind: Pod
+    name: nginx-deployment-c7658755-hbkhx
+    namespace: default
+    uid: 839d378f-ce94-486a-a8f0-0200542d3082
+- addresses:
+  - 10.244.2.2
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: source-cluster-worker
+  targetRef:
+    kind: Pod
+    name: nginx-deployment-c7658755-zj9wn
+    namespace: default
+    uid: c2b71df9-74d6-480d-be7e-d46e8487b5ef
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2025-08-05T09:06:09Z"
+  creationTimestamp: "2025-08-05T09:05:56Z"
+  generateName: nginx-service-
+  generation: 3
+  labels:
+    app: nginx
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    kubernetes.io/service-name: nginx-service
+  managedFields:
+  - apiVersion: discovery.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:addressType: {}
+      f:endpoints: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:endpointslice.kubernetes.io/managed-by: {}
+          f:kubernetes.io/service-name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"b464e5b7-f463-4f82-90bf-3109938427fb"}: {}
+      f:ports: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2025-08-05T09:06:09Z"
+  name: nginx-service-lnkfb
+  namespace: default
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: nginx-service
+    uid: b464e5b7-f463-4f82-90bf-3109938427fb
+  resourceVersion: "1453"
+  uid: 8bb4d8ae-80b6-482f-bf65-a23e544c6dfa
+ports:
+- name: http
+  port: 80
+  protocol: TCP

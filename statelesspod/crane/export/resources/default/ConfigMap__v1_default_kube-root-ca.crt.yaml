@@ -1,0 +1,48 @@
+apiVersion: v1
+data:
+  ca.crt: |
+    -----BEGIN CERTIFICATE-----
+    MIIDBTCCAe2gAwIBAgIILHzTtHXz1J0wDQYJKoZIhvcNAQELBQAwFTETMBEGA1UE
+    AxMKa3ViZXJuZXRlczAeFw0yNTA4MDUwODUxMTFaFw0zNTA4MDMwODU2MTFaMBUx
+    EzARBgNVBAMTCmt1YmVybmV0ZXMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
+    AoIBAQC6mRan6fbWjW64gJCm2EYJi6ge/UuEI3ZKaTgCNXroRkWfe8bESIqP3xKL
+    Lizzm0DdXJBS32PyVuoxKJPYXkb+ANUisFCSWdsMFh0yQqwfd/DNVSlM+IllJDyb
+    DI+veFeEKc+jTzGDKwHtDXxpIg2sJDvBU9dR6F17n/LMqF8sVsjLB/duJVkGI0ov
+    V40FpzBHXVMzED+LmKsURq3Pml8YDtEU49aLjeRsrtzEhUIxuc05SJAHK3OOgTmp
+    H9JIJTcU/zWMxVq1upwEc7pTHWu7hNU0F7SjcUXOj+ZzWGuLlBH/or3v5q5E7yUg
+    GjsKZwfcWlN2UpBC8pv1HI5Ez1uVAgMBAAGjWTBXMA4GA1UdDwEB/wQEAwICpDAP
+    BgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBT0BsTyRoDTzu2EmWb1stm9LHHgkTAV
+    BgNVHREEDjAMggprdWJlcm5ldGVzMA0GCSqGSIb3DQEBCwUAA4IBAQB8uUS4pZ+o
+    k17hiUPHtIzHJkulRlctdMXWD9PgwQ4AzO6MiPp42yC/1emTkPYndnoqZkv/tVNH
+    eKJeVLf09+dOm9OZcIzwlrHegaKgBfzKnSNR3TKqZk0gwfhCvS05ifs0r0o3ph5R
+    LoL/Ve8cJTY4o0bWVE5VHhFN+LGrtR7Xfzlp81NYkxaAS6CXKqzjfzmW1bxQBCxY
+    jkfP62iZtx5OaBb+8eZDbW7pJvNRo6c3h9TGviumvGkxBSZAcq5LL5hNt2U8CT2h
+    prx6PIjrOs7TO4ZVwGlk2Xx4/xCV0+VTzMZM5cIUMAMhcPSYPgTq0q6DAebkBBBQ
+    5J3/1zFIbsQu
+    -----END CERTIFICATE-----
+kind: ConfigMap
+metadata:
+  annotations:
+    kubernetes.io/description: Contains a CA bundle that can be used to verify the
+      kube-apiserver when using internal endpoints such as the internal service IP
+      or kubernetes.default.svc. No other usage is guaranteed across distributions
+      of Kubernetes clusters.
+  creationTimestamp: "2025-08-05T08:56:25Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:ca.crt: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubernetes.io/description: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2025-08-05T08:56:25Z"
+  name: kube-root-ca.crt
+  namespace: default
+  resourceVersion: "375"
+  uid: cd91aa92-89e7-4675-ba6e-31475657ac72
