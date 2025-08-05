@@ -1,0 +1,30 @@
+# Nginx ConfigMap - Stores configuration data for Nginx application
+# This ConfigMap contains environment variables and Nginx server configuration
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-config
+  namespace: default
+  labels:
+    app: nginx
+data:
+  # Environment variables that will be injected into Nginx containers
+  host: "0.0.0.0"    # Bind to all network interfaces
+  port: "80"          # Standard HTTP port
+  
+  # Nginx server configuration block
+  nginx.conf: |
+    server {
+        listen 80;
+        server_name localhost;
+        
+        location / {
+            root   /usr/share/nginx/html;
+            index  index.html index.htm;
+        }
+        
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   /usr/share/nginx/html;
+        }
+    } 
