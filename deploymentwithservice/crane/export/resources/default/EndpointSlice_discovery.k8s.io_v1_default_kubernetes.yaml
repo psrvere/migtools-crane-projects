@@ -1,0 +1,35 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 172.18.0.2
+  conditions:
+    ready: true
+kind: EndpointSlice
+metadata:
+  creationTimestamp: "2025-08-06T07:48:30Z"
+  generation: 1
+  labels:
+    kubernetes.io/service-name: kubernetes
+  managedFields:
+  - apiVersion: discovery.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:addressType: {}
+      f:endpoints: {}
+      f:metadata:
+        f:labels:
+          .: {}
+          f:kubernetes.io/service-name: {}
+      f:ports: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2025-08-06T07:48:30Z"
+  name: kubernetes
+  namespace: default
+  resourceVersion: "235"
+  uid: 84dbf7b2-2a10-4469-bc27-2106c44dce6b
+ports:
+- name: https
+  port: 6443
+  protocol: TCP

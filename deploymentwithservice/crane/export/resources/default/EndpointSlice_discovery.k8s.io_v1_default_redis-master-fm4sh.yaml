@@ -1,0 +1,66 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 10.244.2.3
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: source-cluster-worker
+  targetRef:
+    kind: Pod
+    name: redis-master-66b88df5c8-p5cnz
+    namespace: default
+    uid: 6485e258-0366-4655-9f3e-ce589373f062
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2025-08-06T08:15:09Z"
+  creationTimestamp: "2025-08-06T08:14:25Z"
+  generateName: redis-master-
+  generation: 2
+  labels:
+    app: redis
+    component: master
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    kubernetes.io/service-name: redis-master
+  managedFields:
+  - apiVersion: discovery.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:addressType: {}
+      f:endpoints: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:component: {}
+          f:endpointslice.kubernetes.io/managed-by: {}
+          f:kubernetes.io/service-name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"7d94fa40-c59a-42d6-91cc-e7dcddd9998f"}: {}
+      f:ports: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2025-08-06T08:15:09Z"
+  name: redis-master-fm4sh
+  namespace: default
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: redis-master
+    uid: 7d94fa40-c59a-42d6-91cc-e7dcddd9998f
+  resourceVersion: "3037"
+  uid: 47bd82ab-9ef5-4cc3-8a84-38c670214d7d
+ports:
+- name: redis
+  port: 6379
+  protocol: TCP
