@@ -4,9 +4,6 @@
 
 **What you'll learn:** Core CLI workflow (export-transform-apply pipeline), basic manifest handling, and non-destructive operations. Reference the guestbook example in the Crane repo for guidance.
 
-Crane Repo - https://github.com/migtools/crane
-Crane Lib Repo - https://github.com/migtools/crane-lib
-
 ---
 
 ## Implementation Guide
